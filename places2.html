@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TRAVEL</title>  
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/Maks.css">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+ 	<style type="text/css">
+
+	#map {
+	  height: 100%;
+	}
+
+	html,
+	body {
+	  height: 90%;
+	  margin: 0;
+	  padding: 0;
+	}
+	</style>
+	 
+  	<script>
+	let map;
+
+	function initMap() {
+	  const center = { lat:55.834098, lng: 37.544742};
+	  const localContextMapView = new google.maps.localContext.LocalContextMapView(
+		{
+		  element: document.getElementById("map"),
+		  placeTypePreferences: ["restaurant", "park"],
+		  maxPlaceCount: 20,
+		  directionsOptions: { origin: center },
+		}
+	  );
+	  map = localContextMapView.map;
+	  new google.maps.Marker({ position: center, map: map });
+	  map.setOptions({
+		center: center,
+		zoom: 16,
+	  });
+	}
+  	</script>
+
+  </head>
+
+  <body>
+  
+	<header class="header2">
+		<div class="container">
+			<div class="col-lg-5 ai">
+				<img src="img/robot.png" alt="travel" height="55">
+			</div>
+		</div>
+	</header>
+	
+	<div id="map"></div>	
+
+	<footer class="footer fixed-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="credits">
+						TRAVEL
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB59qOr19TZgwsx8anEkf0IMPeu8zbM_jE&libraries=localContext&v=beta&callback=initMap">
+</script>
+
+  </body>
+</html>
