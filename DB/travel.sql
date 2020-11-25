@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 25 2020 г., 12:47
+-- Время создания: Ноя 25 2020 г., 14:21
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.1.33
 
@@ -20,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- База данных: `travel`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `bunch`
+--
+
+CREATE TABLE `bunch` (
+  `id` int(11) NOT NULL,
+  `id-route` int(11) NOT NULL,
+  `id-place` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -48,7 +60,6 @@ CREATE TABLE `place` (
 
 CREATE TABLE `route` (
   `id` int(11) NOT NULL,
-  `id-place` int(11) NOT NULL,
   `rate-route` int(11) DEFAULT NULL,
   `date-add` date NOT NULL,
   `review-route` varchar(500) DEFAULT NULL
@@ -85,6 +96,14 @@ CREATE TABLE `user` (
 --
 
 --
+-- Индексы таблицы `bunch`
+--
+ALTER TABLE `bunch`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id-place` (`id-place`),
+  ADD KEY `id-route` (`id-route`);
+
+--
 -- Индексы таблицы `place`
 --
 ALTER TABLE `place`
@@ -94,8 +113,7 @@ ALTER TABLE `place`
 -- Индексы таблицы `route`
 --
 ALTER TABLE `route`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id-place` (`id-place`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `timetable`
@@ -114,6 +132,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `bunch`
+--
+ALTER TABLE `bunch`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `place`
@@ -144,10 +168,11 @@ ALTER TABLE `user`
 --
 
 --
--- Ограничения внешнего ключа таблицы `route`
+-- Ограничения внешнего ключа таблицы `bunch`
 --
-ALTER TABLE `route`
-  ADD CONSTRAINT `route_ibfk_1` FOREIGN KEY (`id-place`) REFERENCES `place` (`id`);
+ALTER TABLE `bunch`
+  ADD CONSTRAINT `bunch_ibfk_1` FOREIGN KEY (`id-place`) REFERENCES `place` (`id`),
+  ADD CONSTRAINT `bunch_ibfk_2` FOREIGN KEY (`id-route`) REFERENCES `route` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `timetable`
