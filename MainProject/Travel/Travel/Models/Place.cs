@@ -16,7 +16,5 @@ namespace Travel.Models
         public string Status { get; set; }
         public string Type { get; set; }
         public string ReviewPlace { get; set; }
-    
-
-}
+    }
 }
