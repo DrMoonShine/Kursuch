@@ -16,12 +16,12 @@ namespace Travel.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<MvcPlaceContext>>()))
             {
-                // Look for any movies.
+                // Look for any places.
                 if (context.Movie.Any())
                 {
                     return;   // DB has been seeded
                 }
-
+                //добавить строку в таблицу Место
                 context.Movie.AddRange(
                     new Place
                     {
@@ -166,248 +166,8 @@ namespace Travel.Models
                         Type = "Культурный центр",
                         ReviewPlace = "В дельфинарий выступает морской котик и тройка дельфинов.Однако немного портит впечатление ведущий.",
                         NamePlace = "Дельфинарий",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 1,
-                        Photo = "photo/photo4.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 1,
-                        Photo = "photo/photo4.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 1,
-                        Photo = "photo/photo4.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 1,
-                        Photo = "photo/photo4.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 2,
-                        Photo = "photo/photo5.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 2,
-                        Photo = "photo/photo5.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 2,
-                        Photo = "photo/photo5.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 2,
-                        Photo = "photo/photo5.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 3,
-                        Photo = "photo/photo6.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 3,
-                        Photo = "photo/photo6.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 3,
-                        Photo = "photo/photo6.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 3,
-                        Photo = "photo/photo6.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 4,
-                        Photo = "photo/photo7.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 4,
-                        Photo = "photo/photo7.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 4,
-                        Photo = "photo/photo7.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 4,
-                        Photo = "photo/photo7.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 5,
-                        Photo = "photo/photo8.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 5,
-                        Photo = "photo/photo8.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 5,
-                        Photo = "photo/photo8.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 5,
-                        Photo = "photo/photo8.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 6,
-                        Photo = "photo/photo9.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 6,
-                        Photo = "photo/photo9.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 6,
-                        Photo = "photo/photo9.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 6,
-                        Photo = "photo/photo9.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 7,
-                        Photo = "photo/photo10.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 7,
-                        Photo = "photo/photo10.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 7,
-                        Photo = "photo/photo10.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 7,
-                        Photo = "photo/photo10.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 8,
-                        Photo = "photo/photo11.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 8,
-                        Photo = "photo/photo11.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 8,
-                        Photo = "photo/photo11.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 8,
-                        Photo = "photo/photo11.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 9,
-                        Photo = "photo/photo12.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 9,
-                        Photo = "photo/photo12.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 9,
-                        Photo = "photo/photo12.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 9,
-                        Photo = "photo/photo12.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 10,
-                        Photo = "photo/photo13.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 10,
-                        Photo = "photo/photo13.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 10,
-                        Photo = "photo/photo13.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 10,
-                        Photo = "photo/photo13.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 11,
-                        Photo = "photo/photo14.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 11,
-                        Photo = "photo/photo14.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 11,
-                        Photo = "photo/photo14.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 11,
-                        Photo = "photo/photo14.3.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 12,
-                        Photo = "photo/photo15.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 12,
-                        Photo = "photo/photo15.1.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 12,
-                        Photo = "photo/photo15.2.jpg",
-                    },
-                    new Photo
-                    {
-                        Id_Place = 12,
-                        Photo = "photo/photo15.3.jpg",
-                    },
-
+                    }
+                    /*
                     new User
                     {
                         Email = "i.ivanov@yandex.ru",
@@ -565,8 +325,256 @@ namespace Travel.Models
                         // User User
                         RouteID = 3,
                         //Route Route
-                    }
+                    }*/
                 );
+                context.SaveChanges();
+                if (context.Movie.Any())
+                {
+                    return;   
+                }
+                //добавить строку в таблицу Фото(фотографии мест)
+                context.Photo.AddRange(
+                    new Photo
+                    {
+                        PlaceID = 1,
+                        RPhoto = "photo/photo4.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 1,
+                        RPhoto = "photo/photo4.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 1,
+                        RPhoto = "photo/photo4.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 1,
+                        RPhoto = "photo/photo4.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 2,
+                        RPhoto = "photo/photo5.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 2,
+                        RPhoto = "photo/photo5.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 2,
+                        RPhoto = "photo/photo5.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 2,
+                        RPhoto = "photo/photo5.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 3,
+                        RPhoto = "photo/photo6.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 3,
+                        RPhoto = "photo/photo6.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 3,
+                        RPhoto = "photo/photo6.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 3,
+                        RPhoto = "photo/photo6.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 4,
+                        RPhoto = "photo/photo7.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 4,
+                        RPhoto = "photo/photo7.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 4,
+                        RPhoto = "photo/photo7.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 4,
+                        RPhoto = "photo/photo7.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 5,
+                        RPhoto = "photo/photo8.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 5,
+                        RPhoto = "photo/photo8.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 5,
+                        RPhoto = "photo/photo8.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 5,
+                        RPhoto = "photo/photo8.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 6,
+                        RPhoto = "photo/photo9.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 6,
+                        RPhoto = "photo/photo9.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 6,
+                        RPhoto = "photo/photo9.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 6,
+                        RPhoto = "photo/photo9.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 7,
+                        RPhoto = "photo/photo10.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 7,
+                        RPhoto = "photo/photo10.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 7,
+                        RPhoto = "photo/photo10.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 7,
+                        RPhoto = "photo/photo10.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 8,
+                        RPhoto = "photo/photo11.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 8,
+                        RPhoto = "photo/photo11.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 8,
+                        RPhoto = "photo/photo11.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 8,
+                        RPhoto = "photo/photo11.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 9,
+                        RPhoto = "photo/photo12.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 9,
+                        RPhoto = "photo/photo12.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 9,
+                        RPhoto = "photo/photo12.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 9,
+                        RPhoto = "photo/photo12.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 10,
+                        RPhoto = "photo/photo13.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 10,
+                        RPhoto = "photo/photo13.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 10,
+                        RPhoto = "photo/photo13.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 10,
+                        RPhoto = "photo/photo13.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 11,
+                        RPhoto = "photo/photo14.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 11,
+                        RPhoto = "photo/photo14.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 11,
+                        RPhoto = "photo/photo14.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 11,
+                        RPhoto = "photo/photo14.3.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 12,
+                        RPhoto = "photo/photo15.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 12,
+                        RPhoto = "photo/photo15.1.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 12,
+                        RPhoto = "photo/photo15.2.jpg",
+                    },
+                    new Photo
+                    {
+                        PlaceID = 12,
+                        RPhoto = "photo/photo15.3.jpg",
+                    }
+                   );
                 context.SaveChanges();
             }
         }
