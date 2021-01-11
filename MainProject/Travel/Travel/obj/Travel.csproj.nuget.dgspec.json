@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nataha\\Documents\\GitHub\\Kursuch\\MainProject\\Travel\\Travel\\Travel.csproj": {}
+    "D:\\kursuch\\Kursuch\\MainProject\\Travel\\Travel\\Travel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nataha\\Documents\\GitHub\\Kursuch\\MainProject\\Travel\\Travel\\Travel.csproj": {
+    "D:\\kursuch\\Kursuch\\MainProject\\Travel\\Travel\\Travel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nataha\\Documents\\GitHub\\Kursuch\\MainProject\\Travel\\Travel\\Travel.csproj",
+        "projectUniqueName": "D:\\kursuch\\Kursuch\\MainProject\\Travel\\Travel\\Travel.csproj",
         "projectName": "Travel",
-        "projectPath": "C:\\Users\\Nataha\\Documents\\GitHub\\Kursuch\\MainProject\\Travel\\Travel\\Travel.csproj",
-        "packagesPath": "C:\\Users\\Nataha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nataha\\Documents\\GitHub\\Kursuch\\MainProject\\Travel\\Travel\\obj\\",
+        "projectPath": "D:\\kursuch\\Kursuch\\MainProject\\Travel\\Travel\\Travel.csproj",
+        "packagesPath": "C:\\Users\\MoonShine\\.nuget\\packages\\",
+        "outputPath": "D:\\kursuch\\Kursuch\\MainProject\\Travel\\Travel\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nataha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MoonShine\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
