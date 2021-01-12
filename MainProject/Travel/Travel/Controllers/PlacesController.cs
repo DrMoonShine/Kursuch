@@ -12,17 +12,41 @@ namespace Travel.Controllers
 {
     public class PlacesController : Controller
     {
+
         private readonly MvcPlaceContext _context;
 
         public PlacesController(MvcPlaceContext context)
         {
             _context = context;
         }
-
+        //Метотд GET используется по умолчанию, поэтому [HttpGet] можно не писать
         // GET: Places
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string placeCitys, string searchString)
         {
-            return View(await _context.Movie.ToListAsync());
+            IQueryable<string> genreQuery = from p in _context.Movie //movie = place(имя таблице перепутано)
+                                            orderby p.City
+                                            select p.City;
+
+            var places = from p in _context.Movie
+                         select p;
+
+            if (!string.IsNullOrEmpty(searchString)) // Если не null
+            {
+                places = places.Where(s => s.NamePlace.Contains(searchString)); //Название введенное пользователем 
+            }
+
+            if (!string.IsNullOrEmpty(placeCitys)) //Если не null
+            {
+                places = places.Where(x => x.City == placeCitys); //Фильтр города
+            }
+            //передача полученныех и отсортированных данных
+            var placeVM = new PlaceViewModel 
+            {
+                Citys = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Places = await places.ToListAsync()
+            };
+
+            return View(placeVM);
         }
 
         // GET: Places/Details/5
