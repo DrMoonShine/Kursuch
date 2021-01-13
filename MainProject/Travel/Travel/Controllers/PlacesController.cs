@@ -21,11 +21,17 @@ namespace Travel.Controllers
         }
         //Метотд GET используется по умолчанию, поэтому [HttpGet] можно не писать
         // GET: Places
-        public async Task<IActionResult> Index(string placeCitys, string searchString)
+        public async Task<IActionResult> Index(string cTyps, string cStatus, string placeCitys, string searchString)
         {
-            IQueryable<string> genreQuery = from p in _context.Movie //movie = place(имя таблице перепутано)
+            IQueryable<string> placeQuery = from p in _context.Movie //movie = place(имя таблице перепутано) Запрос извлекает все города из БД
                                             orderby p.City
                                             select p.City;
+            IQueryable<string> statusQuery = from st in _context.Movie //movie = place(имя таблице перепутано) Запрос извлекаеи все статусы из БД
+                                            orderby st.Status
+                                            select st.Status;
+            IQueryable<string> typeQuery = from t in _context.Movie //movie = place(имя таблице перепутано) Запрос извлекаеи все Типы из БД
+                                             orderby t.Type
+                                             select t.Type;
 
             var places = from p in _context.Movie
                          select p;
@@ -39,11 +45,22 @@ namespace Travel.Controllers
             {
                 places = places.Where(x => x.City == placeCitys); //Фильтр города
             }
+            if (!string.IsNullOrEmpty(cStatus)) //Если не null
+            {
+                places = places.Where(y => y.Status == cStatus); //Фильтр города
+            }
+            if (!string.IsNullOrEmpty(cTyps)) //Если не null
+            {
+                places = places.Where(z => z.Type == cTyps); //Фильтр города
+            }
             //передача полученныех и отсортированных данных
             var placeVM = new PlaceViewModel 
             {
-                Citys = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                RTyps = new SelectList(await typeQuery.Distinct().ToListAsync()),
+                RStatus = new SelectList(await statusQuery.Distinct().ToListAsync()),
+                Citys = new SelectList(await placeQuery.Distinct().ToListAsync()),
                 Places = await places.ToListAsync()
+               
             };
 
             return View(placeVM);
