@@ -340,3 +340,13 @@ C:\Users\Nataha\Documents\GitHub\Kursuch\MainProject\Travel\Travel\obj\Debug\net
 C:\Users\Nataha\Documents\GitHub\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\ref\Travel.dll
 C:\Users\Nataha\Documents\GitHub\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Travel.pdb
 C:\Users\Nataha\Documents\GitHub\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Travel.genruntimeconfig.cache
+D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Travel.StaticWebAssets.xml
+D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Travel.MvcApplicationPartsAssemblyInfo.cs
