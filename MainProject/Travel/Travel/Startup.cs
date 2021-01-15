@@ -26,8 +26,8 @@ namespace Travel
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<MvcPlaceContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("MvcPlaceContext")));
+            services.AddDbContext<TravelContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("TravelContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +48,7 @@ namespace Travel
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -55,6 +56,7 @@ namespace Travel
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Places}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

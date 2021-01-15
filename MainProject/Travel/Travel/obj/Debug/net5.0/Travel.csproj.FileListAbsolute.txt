@@ -350,3 +350,14 @@ D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.AspNetCo
 D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
 D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Travel.MvcApplicationPartsAssemblyInfo.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs

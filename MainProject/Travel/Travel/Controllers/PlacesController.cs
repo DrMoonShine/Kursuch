@@ -13,9 +13,9 @@ namespace Travel.Controllers
     public class PlacesController : Controller
     {
 
-        private readonly MvcPlaceContext _context;
+        private readonly TravelContext _context;
 
-        public PlacesController(MvcPlaceContext context)
+        public PlacesController(TravelContext context)
         {
             _context = context;
         }

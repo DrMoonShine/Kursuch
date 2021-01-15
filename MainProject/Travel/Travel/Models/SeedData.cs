@@ -12,9 +12,9 @@ namespace Travel.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new MvcPlaceContext(
+            using (var context = new TravelContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<MvcPlaceContext>>()))
+                    DbContextOptions<TravelContext>>()))
             {
                 // Look for any places.
                 if (context.Movie.Any())
