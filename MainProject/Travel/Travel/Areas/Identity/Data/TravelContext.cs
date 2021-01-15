@@ -29,7 +29,6 @@ namespace Travel.Data
         public DbSet<Route> Route { get; set; }
         public DbSet<Bunch> Bunch { get; set; }
         public DbSet<TimeTable> TimeTable { get; set; }
-        public DbSet<User> User { get; set; }
         public DbSet<Photo> Photo { get; set; }
 
     }
