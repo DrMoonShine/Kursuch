@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Travel.Data;
 using Travel.Models;
 
+
 namespace Travel.Controllers
 {
     public class PlacesController : Controller
@@ -107,23 +108,23 @@ namespace Travel.Controllers
         }
         //Создать маршрут
         // GET: Route/Create
-        /*public IActionResult AddRoute()
+        public IActionResult AddRoute()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,City,Address,Cost,Rate,Time,Status,Type,ReviewPlace")] Place place)
+        public async Task<IActionResult> AddRoute([Bind("Id,UserID,NameRoute,Discript")] UserRoute userroute)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(place);
+                _context.Add(userroute);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(place);
-        }*/
+            return View(userroute);
+        }
 
         // GET: Places/Edit/5
         public async Task<IActionResult> Edit(int? id)

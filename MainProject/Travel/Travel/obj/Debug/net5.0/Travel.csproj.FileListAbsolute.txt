@@ -363,3 +363,4 @@ D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identi
 D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 D:\kursuch\Kursuch\MainProject\Travel\Travel\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs
+D:\kursuch\Kursuch\MainProject\Travel\Travel\obj\Debug\net5.0\Razor\Views\Places\RouteCreate.cshtml.g.cs

@@ -1,0 +1,44 @@
+﻿@model Travel.Models.UserRoute
+
+@{
+    ViewData["Title"] = "AddRoute";
+}
+
+
+<h1>Создать маршрут</h1>
+
+<h4>Маршрут</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddRoute">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                
+                <input  type="hidden" asp-for="NameRoute" value="" />
+            </div>
+            <div class="form-group">
+                <label asp-for="NameRoute" class="control-label"></label>
+                <input asp-for="NameRoute" class="form-control" />
+                <span asp-validation-for="NameRoute" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Discript" class="control-label"></label>
+                <input asp-for="Discript" class="form-control" />
+                <span asp-validation-for="Discript" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="AddRoute" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
