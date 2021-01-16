@@ -26,10 +26,11 @@ namespace Travel.Data
             
         }
         public DbSet<Place> Movie { get; set; }
-        public DbSet<Route> Route { get; set; }
+        //public DbSet<Route> Route { get; set; }
         public DbSet<Bunch> Bunch { get; set; }
-        public DbSet<TimeTable> TimeTable { get; set; }
+       // public DbSet<TimeTable> TimeTable { get; set; }
         public DbSet<Photo> Photo { get; set; }
+        public DbSet<UserRoute> UserRoute{ get; set; }
 
     }
 }

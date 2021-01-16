@@ -10,7 +10,7 @@ namespace Travel.Models
         public int Id { get; set; }
         public int PlaceID { get; set; } //ссылка на связную модель места
         public  Place Place { get; set; }
-        public int RouteID { get; set; }//ссылка на связную модель маршруты
-        public Route Route { get; set; }
+        public int UserRouteID { get; set; }//ссылка на связную модель маршруты
+        public UserRoute Route { get; set; }
     }
 }

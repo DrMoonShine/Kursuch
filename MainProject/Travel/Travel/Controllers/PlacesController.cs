@@ -105,6 +105,25 @@ namespace Travel.Controllers
             }
             return View(place);
         }
+        //Создать маршрут
+        // GET: Route/Create
+        /*public IActionResult AddRoute()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,City,Address,Cost,Rate,Time,Status,Type,ReviewPlace")] Place place)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(place);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(place);
+        }*/
 
         // GET: Places/Edit/5
         public async Task<IActionResult> Edit(int? id)
