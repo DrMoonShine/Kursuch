@@ -25,7 +25,7 @@ namespace Travel.Data
             // Add your customizations after calling base.OnModelCreating(builder);
             
         }
-        public DbSet<Place> Movie { get; set; }
+        public DbSet<Place> Place { get; set; }
         //public DbSet<Route> Route { get; set; }
         public DbSet<Bunch> Bunch { get; set; }
        // public DbSet<TimeTable> TimeTable { get; set; }

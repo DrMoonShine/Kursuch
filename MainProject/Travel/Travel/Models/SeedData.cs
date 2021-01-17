@@ -17,12 +17,12 @@ namespace Travel.Models
                     DbContextOptions<TravelContext>>()))
             {
                 // Look for any places.
-                if (context.Movie.Any())
+                if (context.Place.Any())
                 {
                     return;   // DB has been seeded
                 }
                 //добавить строку в таблицу Место
-                context.Movie.AddRange(
+                context.Place.AddRange(
                     new Place
                     {
                         City = "Ярославль",
@@ -328,7 +328,7 @@ namespace Travel.Models
                     }*/
                 );
                 context.SaveChanges();
-                if (context.Movie.Any())
+                if (context.Place.Any())
                 {
                     return;   
                 }

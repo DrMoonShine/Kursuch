@@ -24,17 +24,17 @@ namespace Travel.Controllers
         // GET: Places
         public async Task<IActionResult> Index(string cTyps, string cStatus, string placeCitys, string searchString)
         {
-            IQueryable<string> placeQuery = from p in _context.Movie //movie = place(имя таблице перепутано) Запрос извлекает все города из БД
+            IQueryable<string> placeQuery = from p in _context.Place 
                                             orderby p.City
                                             select p.City;
-            IQueryable<string> statusQuery = from st in _context.Movie //movie = place(имя таблице перепутано) Запрос извлекаеи все статусы из БД
+            IQueryable<string> statusQuery = from st in _context.Place
                                             orderby st.Status
                                             select st.Status;
-            IQueryable<string> typeQuery = from t in _context.Movie //movie = place(имя таблице перепутано) Запрос извлекаеи все Типы из БД
+            IQueryable<string> typeQuery = from t in _context.Place 
                                              orderby t.Type
                                              select t.Type;
 
-            var places = from p in _context.Movie
+            var places = from p in _context.Place
                          select p;
 
             if (!string.IsNullOrEmpty(searchString)) // Если не null
@@ -75,7 +75,7 @@ namespace Travel.Controllers
                 return NotFound();
             }
 
-            var place = await _context.Movie
+            var place = await _context.Place
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (place == null)
             {
@@ -134,7 +134,7 @@ namespace Travel.Controllers
                 return NotFound();
             }
 
-            var place = await _context.Movie.FindAsync(id);
+            var place = await _context.Place.FindAsync(id);
             if (place == null)
             {
                 return NotFound();
@@ -185,7 +185,7 @@ namespace Travel.Controllers
                 return NotFound();
             }
 
-            var place = await _context.Movie
+            var place = await _context.Place
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (place == null)
             {
@@ -200,15 +200,15 @@ namespace Travel.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var place = await _context.Movie.FindAsync(id);
-            _context.Movie.Remove(place);
+            var place = await _context.Place.FindAsync(id);
+            _context.Place.Remove(place);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PlaceExists(int id)
         {
-            return _context.Movie.Any(e => e.Id == id);
+            return _context.Place.Any(e => e.Id == id);
         }
     }
 }

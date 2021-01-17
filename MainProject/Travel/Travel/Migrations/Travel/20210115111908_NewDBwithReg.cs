@@ -47,7 +47,7 @@ namespace Travel.Migrations.Travel
                 });
 
             migrationBuilder.CreateTable(
-                name: "Movie",
+                name: "Place",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -64,7 +64,7 @@ namespace Travel.Migrations.Travel
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Movie", x => x.Id);
+                    table.PrimaryKey("PK_Place", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -216,9 +216,9 @@ namespace Travel.Migrations.Travel
                 {
                     table.PrimaryKey("PK_Photo", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Photo_Movie_PlaceID",
+                        name: "FK_Photo_Place_PlaceID",
                         column: x => x.PlaceID,
-                        principalTable: "Movie",
+                        principalTable: "Place",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -236,9 +236,9 @@ namespace Travel.Migrations.Travel
                 {
                     table.PrimaryKey("PK_Bunch", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Bunch_Movie_PlaceID",
+                        name: "FK_Bunch_Place_PlaceID",
                         column: x => x.PlaceID,
-                        principalTable: "Movie",
+                        principalTable: "Place",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -373,7 +373,7 @@ namespace Travel.Migrations.Travel
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "Movie");
+                name: "Place");
 
             migrationBuilder.DropTable(
                 name: "Route");
