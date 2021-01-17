@@ -3,64 +3,62 @@
 @{
     ViewData["Title"] = "Details";
 }
+<head>
+    <link type="text/css" href="~/Styles/rating.css" rel="stylesheet" />
 
-<h1>Details</h1>
+</head>
+<hr />
 
-<div>
-    <h4>Place</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.City)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.City)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cost)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cost)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Rate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Rate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Time)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Time)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Type)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ReviewPlace)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ReviewPlace)
-        </dd>
-    </dl>
+<div class="row">
+
+    <div class="col-md-12"> <img src="http://images.vfl.ru/ii/1610877485/32626723/32980151.jpg" alt="" width="1200" style="border-radius: 15px" class="center"></div>
 </div>
-<div>
+<br />
+<h1 class="detail">@Html.DisplayFor(model => model.NamePlace)</h1>
+<hr />
+<div class="row">
+    <div class="col-2">
+        <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+        </div>
+    </div>
+    <div class="col-3"> <h3><a href="#">Оставить отзыв</a></h3> </div>
+    <div class="col-7"> </div>
+</div>
+<hr />
+<h3 class="ser">Цена</h3>
+<h3 class="black">@Html.DisplayFor(model => model.Cost) ₽</h3>
+<br>
+<div class="submit-form">
+    <form>
+        <div class="row">
+            <div class="col-md-8">
+                <h3 class="ser">Адрес</h3>
+                <h3 class="black">@Html.DisplayFor(model => model.Address)</h3>
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn">Добавить в маршрут</button>
+            </div>
+            
+
+        </div>
+</form>
+</div>
+<hr />
+<br /><br /><br />
+<h1 class="detail">Описание</h1> <br />
+                                 <h3 class="blackop"> @Html.DisplayFor(model => model.ReviewPlace)</h3>
+<br /><br />
+<div class="ser" >
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

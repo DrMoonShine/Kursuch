@@ -2,21 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewData["Title"] - Travel</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/fontAwesome.css">
+    <link rel="stylesheet" href="~/css/hero-slider.css">
+    <link rel="stylesheet" href="~/css/owl-carousel.css">
+    <link rel="stylesheet" href="~/css/datepicker.css">
+    <link rel="stylesheet" href="~/css/templatemo.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="wrap">
+        <header id="header">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Places" asp-action="Index">Travel</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!--   <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="primary-nav-button" type="button">Menu</button>
+                        
+                            <div class="logo">
+                                    <img src="~/img/logo-sm.2dc5d127.svg" alt="Travel" width="110" height="110" />
+                            </div>
+                        =
+
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="dropdown menu">
+                                <li class='active'><a href="#">Маршрут</a></li>
+                                <li>
+                                    <a href="#">Избранное</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="#">Most Visited 1</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Sub Visited Menu 1</a></li>
+                                                <li><a href="#">Sub Visited Two</a></li>
+                                                <li><a href="#">Sub Visited Menu 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Most Visited 2</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Sub Visited Menu 4</a></li>
+                                                <li><a href="#">Sub Visited Five</a></li>
+                                                <li><a href="#">Sub Visited Menu 6</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Most Visited 3</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Sub Visited Menu 7</a></li>
+                                                <li><a href="#">Sub Visited #8</a></li>
+                                                <li><a href="#">Sub Visited Menu 9</a></li>
+                                                <li><a href="#">Sub Visited #10</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                              
+                                <li><a class="scrollTo" data-scrollTo="services" href="#">Регистрация</a></li>
+   
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                        <!--   <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                               <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -26,23 +76,26 @@
         </li>
     </ul>
             </div> -->
+                    </div>
+                </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
+        </header> </div>
         <div class="container">
-            &copy; 2021 - Travel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - Travel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    
 </body>
 </html>
+
