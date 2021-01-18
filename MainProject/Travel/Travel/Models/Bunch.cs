@@ -12,5 +12,7 @@ namespace Travel.Models
         public  Place Place { get; set; }
         public int UserRouteID { get; set; }//ссылка на связную модель маршруты
         public UserRoute Route { get; set; }
+        // public List<UserRoute> uRoutes { get; set; } //список маршрутов
+        //public IEnumerable<string> RoutesId { get; set; }
     }
 }

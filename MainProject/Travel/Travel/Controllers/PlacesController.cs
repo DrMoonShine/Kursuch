@@ -22,17 +22,21 @@ namespace Travel.Controllers
         }
         //Метотд GET используется по умолчанию, поэтому [HttpGet] можно не писать
         // GET: Places
+        public async Task<IActionResult> IndexRoute()
+        {
+            return View(await _context.UserRoute.ToListAsync());
+        }
         public async Task<IActionResult> Index(string cTyps, string cStatus, string placeCitys, string searchString)
         {
-            IQueryable<string> placeQuery = from p in _context.Place 
+            IQueryable<string> placeQuery = from p in _context.Place
                                             orderby p.City
                                             select p.City;
             IQueryable<string> statusQuery = from st in _context.Place
-                                            orderby st.Status
-                                            select st.Status;
-            IQueryable<string> typeQuery = from t in _context.Place 
-                                             orderby t.Type
-                                             select t.Type;
+                                             orderby st.Status
+                                             select st.Status;
+            IQueryable<string> typeQuery = from t in _context.Place
+                                           orderby t.Type
+                                           select t.Type;
 
             var places = from p in _context.Place
                          select p;
@@ -55,13 +59,13 @@ namespace Travel.Controllers
                 places = places.Where(z => z.Type == cTyps); //Фильтр города
             }
             //передача полученныех и отсортированных данных
-            var placeVM = new PlaceViewModel 
+            var placeVM = new PlaceViewModel
             {
                 RTyps = new SelectList(await typeQuery.Distinct().ToListAsync()),
                 RStatus = new SelectList(await statusQuery.Distinct().ToListAsync()),
                 Citys = new SelectList(await placeQuery.Distinct().ToListAsync()),
                 Places = await places.ToListAsync()
-               
+
             };
 
             return View(placeVM);
@@ -210,5 +214,31 @@ namespace Travel.Controllers
         {
             return _context.Place.Any(e => e.Id == id);
         }
+        [HttpGet]
+        public async Task<IActionResult> AddPlace(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var rp = new Bunch();
+            rp.PlaceID = id.Value;
+            //rp.RoutesId = 
+            return View(rp);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddPlace([Bind("Id,PlaceID,UserRouteID ")] Bunch bunch)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(bunch);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(bunch);
+        }
+
+
     }
 }
