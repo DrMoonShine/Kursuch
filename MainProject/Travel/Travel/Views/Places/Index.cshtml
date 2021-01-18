@@ -110,11 +110,12 @@
 
                 </div>
                 <div class="kartinka">
-                    <a asp-action="Details" asp-route-id="@item.Id"><img src="http://images.vfl.ru/ii/1610877485/32626723/32980151.jpg" width="300" height="255" alt=""></a> 
+                    <a asp-action="Details" asp-route-id="@item.Id"><img src="@Html.DisplayFor(modelItem => item.Photo)" width="300" height="255" alt=""></a> 
                 </div>
                 <div class="card__info">
                     <span class="card__category">@Html.DisplayFor(modelItem => item.Type)</span>
                     <h3 class="card__title">@Html.DisplayFor(modelItem => item.NamePlace)</h3>
+                    
                     <p class="card__author">@Html.DisplayFor(modelItem => item.City)</p>
                     <p class="card__by">
                         @Html.DisplayFor(modelItem => item.Address)

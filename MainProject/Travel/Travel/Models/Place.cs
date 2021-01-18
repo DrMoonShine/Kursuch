@@ -17,6 +17,7 @@ namespace Travel.Models
         public string Type { get; set; }
         public string ReviewPlace { get; set; }
         public string NamePlace { get; set; }
+        public string Photo { get; set; }
     }
 
 
