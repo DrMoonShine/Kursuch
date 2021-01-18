@@ -22,10 +22,7 @@ namespace Travel.Controllers
         }
         //Метотд GET используется по умолчанию, поэтому [HttpGet] можно не писать
         // GET: Places
-        public async Task<IActionResult> IndexRoute()
-        {
-            return View(await _context.UserRoute.ToListAsync());
-        }
+        
         public async Task<IActionResult> Index(string cTyps, string cStatus, string placeCitys, string searchString)
         {
             IQueryable<string> placeQuery = from p in _context.Place
@@ -238,7 +235,16 @@ namespace Travel.Controllers
             }
             return View(bunch);
         }
-
+        [HttpGet]
+        
+        public async Task<IActionResult> AllRoute()
+        {
+            var m = new RouteViewModel();
+            m.AllUserRoutes = _context.UserRoute.ToList();
+            m.AllPlaces= _context.Place.ToList();
+            m.AllBunch = _context.Bunch.ToList();
+            return View(m);
+        }
 
     }
 }
