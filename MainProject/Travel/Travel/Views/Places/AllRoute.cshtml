@@ -1,13 +1,49 @@
 ﻿@model Travel.Models.RouteViewModel
-    <head>
+
+@foreach (var item in Model.AllUserRoutes)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discript)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameRoute)
+        </td>
+
+    </tr>}
 
 
-    </head>
+
 <hr />
 <h1 class="detail">Маршрут "Первый"</h1>
-<h3 class="black">-Красная площадь</h3>
-<h3 class="black">-ВДНХ</h3>
+
+    <h2 class="black">Государственный музей-заповедник Ростовский кремль</h2>
+    <a href="https://localhost:44357/Places/Details/9"><img class="marsh" src="https://media-cdn.tripadvisor.com/media/photo-s/17/81/50/f9/caption.jpg" alt="Travel" width="200" style="border-radius: 15px" /></a>
+    <br /><h2 class="black">Собрание</h2>
+    <a href="https://localhost:44357/Places/Details/10"><img class="marsh" src="https://img01.rl0.ru/afisha/o/rests.afisha.ru/uploads/images/5/4a/54a2c6ea114e46b5b321d95497c99e05.jpg" alt="Travel" width="200" style="border-radius: 15px" /></a>
+<br /><h3 class="ser">Стоимость</h3>
+<h3 class="black">1000 ₽</h3>
+<br>
+<h3 class="ser">Время</h3>
+<h3 class="black">2:00-3:00</h3>
+<br>
 <hr />
 <h1 class="detail">Маршрут "Прогулка"</h1>
-<h3 class="black">- Музей 1</h3>
-<h3 class="black">- Музей 10</h3>
+<h2 class="black">Пляж курорта Роза Хутор</h2>
+<a href="https://localhost:44357/Places/Details/11">
+    <img class="marsh"  src="https://drivenew.ru/upload/iblock/0f7/0f745e03ef294fc6fc6bbe0b96e87cf2.jpg" alt="Travel" width="200" style="border-radius: 15px"/><br /> </a>
+    <h2 class="black">Дельфинарий</h2>
+    <a href="https://localhost:44357/Places/Details/12"><img class="marsh" src="https://life-trip.ru/wp-content/uploads/2018/04/IMG_5181.jpg" alt="Travel" width="200" style="border-radius: 15px" /></a>
+    <h3 class="ser">Стоимость</h3>
+    <h3 class="black">1000 ₽</h3>
+    <br>
+    <h3 class="ser">Время</h3>
+    <h3 class="black">2:00-7:00</h3>
+    <br>
+ 
+    <style>
+        .marsh {
+            margin-bottom: 30px; /* Поле снизу */
+            margin-left: 10px; /* Поле снизу */
+        }
+    </style>
