@@ -4,14 +4,14 @@
     ViewData["Title"] = "Details";
 }
 <head>
-    <link type="text/css" href="~/Styles/rating.css" rel="stylesheet" />
+    
 
 </head>
 <hr />
 
 <div class="row">
 
-    <div class="col-md-12"> <img src="http://images.vfl.ru/ii/1610877485/32626723/32980151.jpg" alt="" width="1200" style="border-radius: 15px" class="center"></div>
+    <div class="col-md-12"> <img src="@Html.DisplayFor(model => model.Photo)" alt="" width="1200" style="border-radius: 15px" class="center"></div>
 </div>
 <br />
 <h1 class="detail">@Html.DisplayFor(model => model.NamePlace)</h1>
@@ -59,6 +59,6 @@
                                  <h3 class="blackop"> @Html.DisplayFor(model => model.ReviewPlace)</h3>
 <br /><br />
 <div class="ser" >
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Редактировать</a> |
+    <a asp-action="Index">Вернутся назад</a>
 </div>

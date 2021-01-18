@@ -114,7 +114,17 @@ section {
 #primary-nav-button:hover {
   background: rgba(0,0,0,0.05);
 }
+.createnew a {
+    color: #1746ca; /* Цвет текста *//* Цвет фона */
 
+}
+.createnew {
+    color: #1746ca; /* Цвет текста */
+
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+}
 #primary-nav-button.selected {
   background: rgba(0,0,0,0.1);
 }
@@ -142,7 +152,14 @@ section {
 
 #header .logo img {
   width: 100%;
-  overflow: hidden;
+
+}
+logo-hed {
+    float: left;
+    background: url() no-repeat;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
 }
 
 .menu {
@@ -415,7 +432,17 @@ section.banner {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
-
+.form-group label {
+    font-size: 20px;
+    color: black;
+}
+.form-group {
+    margin-left: 10px;
+    font-size: 16px;
+}
+.btn btn-primary {
+    font-size: 20px;
+}
 .submit-form button {
     width: 100%;
     height: 50px;
@@ -448,8 +475,21 @@ section.banner {
         color: #f7464e;
         border-radius: 30px;
     }
+
+
+.card__info button {
+    background-color: #f7464e;
+    border: 2px solid #f7464e;
+}
+
+.card__info button:hover {
+        background-color: transparent;
+        color: #f7464e;
+        border-radius: 30px;
+    }
+
 .popular-places .owl-nav {
-  display: none;
+    display: none;
 }
 
 .popular-places .owl-dots {
@@ -1098,9 +1138,12 @@ footer .footer-heading h4 {
   margin-bottom: 40px;
 }
 
+.knop {
+    margin-left: 10px;
+}
 
 footer .about-veno .logo {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 footer .about-veno ul li a {
@@ -1133,6 +1176,11 @@ footer .about-veno ul li a {
 }
 .detail {
     font-size: 35px;
+    font-family: 'Segoe UI';
+}
+.detail1 {
+    margin-left: -3px;
+        font-size: 35px;
     font-family: 'Segoe UI';
 }
 .center {

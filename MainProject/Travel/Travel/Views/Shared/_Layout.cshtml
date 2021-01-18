@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="~/css/owl-carousel.css">
     <link rel="stylesheet" href="~/css/datepicker.css">
     <link rel="stylesheet" href="~/css/templatemo.css">
-
+    <link type="text/css" href="~/Styles/rating.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 </head>
 <body>
@@ -24,46 +24,18 @@
                         <button id="primary-nav-button" type="button">Menu</button>
                         
                             <div class="logo">
-                                    <img src="~/img/logo-sm.2dc5d127.svg" alt="Travel" width="110" height="110" />
-                            </div>
-                        =
-
+                                <a asp-action="Index" class="logo-fut"><img src="~/img/logo-sm.2dc5d127.svg" alt="Travel" width="110" height="110" /></a>
+</div>
                         <nav id="primary-nav" class="dropdown cf">
                             <ul class="dropdown menu">
-                                <li class='active'><a href="#">Маршрут</a></li>
+                                <li class='active'><a asp-action="Index">Главная</a></li>
+                                <li class='active'><a asp-action="AllRoute">Маршруты</a></li>
                                 <li>
                                     <a href="#">Избранное</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Most Visited 1</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Sub Visited Menu 1</a></li>
-                                                <li><a href="#">Sub Visited Two</a></li>
-                                                <li><a href="#">Sub Visited Menu 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Most Visited 2</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Sub Visited Menu 4</a></li>
-                                                <li><a href="#">Sub Visited Five</a></li>
-                                                <li><a href="#">Sub Visited Menu 6</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Most Visited 3</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Sub Visited Menu 7</a></li>
-                                                <li><a href="#">Sub Visited #8</a></li>
-                                                <li><a href="#">Sub Visited Menu 9</a></li>
-                                                <li><a href="#">Sub Visited #10</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
                                 </li>
-                              
-                                <li><a class="scrollTo" data-scrollTo="services" href="#">Регистрация</a></li>
-   
+
+                                <li><a class="scrollTo" data-scrollTo="services" href="/Identity/Account/Login">Войти</a></li>
+
                             </ul>
                         </nav><!-- / #primary-nav -->
                         <!--   <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
